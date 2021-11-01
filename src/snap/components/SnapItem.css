@@ -1,0 +1,73 @@
+.snap-item {
+  line-height: 1.6;
+  min-width: 20rem;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.snap-item:hover {
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.9);
+  transform: translateY(-1.2rem);
+}
+
+.snap-item__image {
+  height: 24rem;
+  margin-bottom: 3.2rem;
+}
+
+.snap-item__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.snap-item__info {
+  height: 16rem;
+  margin-bottom: 0.8rem;
+  padding: 0 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+.snap-item__info-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+}
+
+.snap-item__info-address {
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  color: #767676;
+}
+
+.snap-item__info-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #767676;
+  overflow: hidden;
+}
+
+.snap-item__actions {
+  height: 8rem;
+
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.map-container {
+  height: 20rem;
+  width: 100%;
+}

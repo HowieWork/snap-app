@@ -1,0 +1,43 @@
+.main-navigation__menu-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.main-navigation__menu-btn span {
+  display: block;
+  width: 2.4rem;
+  height: 2px;
+  background: #333;
+}
+
+.main-navigation__title a:link,
+.main-navigation__title a:visited,
+.main-navigation__title a:hover,
+.main-navigation__title a:active {
+  font-size: 3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+}
+
+.main-navigation__drawer-nav {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-navigation__menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-navigation__links {
+    display: none;
+  }
+}

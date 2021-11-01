@@ -1,0 +1,30 @@
+.users-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 4rem;
+  width: 80%;
+  /* max-width: 100rem; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.users-list-no-users-found {
+  padding: 12.8rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #333;
+}
+
+@media (max-width: 1024px) {
+  .users-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 384px) {
+  .users-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
