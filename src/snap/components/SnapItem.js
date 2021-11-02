@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react';
 import Card from '../../shared/components/UIElements/Card';
 import Button from '../../shared/components/FormElements/Button';
 import Modal from '../../shared/components/UIElements/Modal';
+import Map from '../../shared/components/UIElements/Map';
 
 import './SnapItem.css';
 
@@ -23,7 +24,7 @@ const SnapItem = (props) => {
         footer={<Button onClick={closeMapHandler}>Close</Button>}
       >
         <div className='map-container'>
-          <h2>THE MAP</h2>
+          <Map center={props.coordinates} zoom={12} />
         </div>
       </Modal>
       <Card className='snap-item'>
@@ -37,7 +38,7 @@ const SnapItem = (props) => {
             <p className='snap-item__info-description'>{props.description}</p>
           </div>
           <div className='snap-item__actions'>
-            <Button onClick={openMapHandler}>View on map</Button>
+            <Button onClick={openMapHandler}>View on Map</Button>
             <Button to={`/snaps/${props.id}`} inverse>
               Edit
             </Button>
