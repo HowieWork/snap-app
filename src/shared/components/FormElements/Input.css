@@ -33,6 +33,7 @@
 
 .form-control--invalid p {
   color: #ff7675;
+  font-size: 1.2rem;
 }
 
 .form-control--invalid input,
