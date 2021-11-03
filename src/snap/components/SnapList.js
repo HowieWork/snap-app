@@ -1,4 +1,5 @@
 import SnapItem from './SnapItem';
+import Button from '../../shared/components/FormElements/Button';
 
 import '../../index.css';
 import './SnapList.css';
@@ -10,7 +11,7 @@ const SnapList = (props) => {
         <p className='snaps-list-no-snaps-found'>
           No snaps found. Maybe create one?
         </p>
-        <button>Share Snap</button>
+        <Button to='/snaps/new'>Share Snap</Button>
       </div>
     );
   }

@@ -7,8 +7,9 @@ import {
 
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import Users from './user/pages/Users';
-import NewSnap from './snap/pages/NewSnap';
 import UserSnaps from './snap/pages/UserSnaps';
+import NewSnap from './snap/pages/NewSnap';
+import UpdateSnap from './snap/pages/UpdateSnap';
 
 const App = () => {
   return (
@@ -24,6 +25,9 @@ const App = () => {
           </Route>
           <Route path='/snaps/new' exact>
             <NewSnap />
+          </Route>
+          <Route path='/snaps/:snapId'>
+            <UpdateSnap></UpdateSnap>
           </Route>
           <Redirect to='/' />
         </Switch>

@@ -8,3 +8,10 @@
   border-radius: 11px;
   background: white;
 }
+
+.no-snaps-found {
+  padding: 12.8rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #333;
+}

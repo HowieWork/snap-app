@@ -67,7 +67,30 @@
   text-align: center;
 }
 
+.snap-item__actions button,
+.snap-item__actions a {
+  margin: 0.5rem;
+}
+
 .map-container {
   height: 20rem;
   width: 100%;
+}
+
+.snap-item__modal-content {
+  padding: 0;
+}
+.snap-item__modal-content p {
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #333;
+}
+.snap-item__modal-actions {
+  text-align: center;
+}
+.snap-item__modal-actions button,
+.snap-item__modal-actions a {
+  margin: 0.5rem;
 }

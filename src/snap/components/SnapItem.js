@@ -9,9 +9,20 @@ import './SnapItem.css';
 
 const SnapItem = (props) => {
   const [showMap, setShowMap] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
 
   const openMapHandler = () => setShowMap(true);
   const closeMapHandler = () => setShowMap(false);
+  const showDeleteWarningHandler = () => {
+    setShowConfirmModal(true);
+  };
+  const cancelDeleteHandler = () => {
+    setShowConfirmModal(false);
+  };
+  const confirmDeleteHandler = () => {
+    setShowConfirmModal(false);
+    console.log('DELETING...');
+  };
 
   return (
     <Fragment>
@@ -19,13 +30,35 @@ const SnapItem = (props) => {
         show={showMap}
         onCancel={closeMapHandler}
         header={`ICON ${props.address}`}
-        contentClass='place-item__modal-content'
-        footerClass='place-item__modal-actions'
+        contentClass='snap-item__modal-content'
+        footerClass='snap-item__modal-actions'
         footer={<Button onClick={closeMapHandler}>Close</Button>}
       >
         <div className='map-container'>
           <Map center={props.coordinates} zoom={12} />
         </div>
+      </Modal>
+      <Modal
+        show={showConfirmModal}
+        onCancel={cancelDeleteHandler}
+        header='Are you sure?'
+        contentClass='snap-item__modal-content'
+        footerClass='snap-item__modal-actions'
+        footer={
+          <Fragment>
+            <Button onClick={cancelDeleteHandler} inverse>
+              Cancel
+            </Button>
+            <Button onClick={confirmDeleteHandler} danger>
+              Delete
+            </Button>
+          </Fragment>
+        }
+      >
+        <p>
+          Do you want to proceed and delete this snap? You can't undo this
+          action.
+        </p>
       </Modal>
       <Card className='snap-item'>
         <li>
@@ -42,7 +75,9 @@ const SnapItem = (props) => {
             <Button to={`/snaps/${props.id}`} inverse>
               Edit
             </Button>
-            <Button danger>Delete</Button>
+            <Button onClick={showDeleteWarningHandler} danger>
+              Delete
+            </Button>
             {/*FIXME <Button disabled>Button</Button>
           <Button size='small'>Small Button</Button>
           <Button size='large' inverse='true'>
