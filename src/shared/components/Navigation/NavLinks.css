@@ -22,6 +22,32 @@
   transition: all 0.3s;
 }
 
+.nav-links button {
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 0.6rem 1.2rem;
+  color: #767676;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: 1px solid #b2bec3;
+  border-radius: 0.6rem;
+}
+
+.nav-links button:focus {
+  outline: none;
+}
+
+.nav-links button:hover,
+.nav-links button:active,
+.nav-links button:focus {
+  color: #333;
+  border-color: #333;
+}
+
 @media (max-width: 767px) {
   .nav-links {
     flex-direction: column;

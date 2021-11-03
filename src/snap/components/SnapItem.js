@@ -1,13 +1,15 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useContext } from 'react';
 
 import Card from '../../shared/components/UIElements/Card';
 import Button from '../../shared/components/FormElements/Button';
 import Modal from '../../shared/components/UIElements/Modal';
 import Map from '../../shared/components/UIElements/Map';
+import { AuthContext } from '../../shared/context/auth-context';
 
 import './SnapItem.css';
 
 const SnapItem = (props) => {
+  const auth = useContext(AuthContext);
   const [showMap, setShowMap] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
 
@@ -72,12 +74,16 @@ const SnapItem = (props) => {
           </div>
           <div className='snap-item__actions'>
             <Button onClick={openMapHandler}>View on Map</Button>
-            <Button to={`/snaps/${props.id}`} inverse>
-              Edit
-            </Button>
-            <Button onClick={showDeleteWarningHandler} danger>
-              Delete
-            </Button>
+            {auth.isLoggedIn && (
+              <Button to={`/snaps/${props.id}`} inverse>
+                Edit
+              </Button>
+            )}
+            {auth.isLoggedIn && (
+              <Button onClick={showDeleteWarningHandler} danger>
+                Delete
+              </Button>
+            )}
             {/*FIXME <Button disabled>Button</Button>
           <Button size='small'>Small Button</Button>
           <Button size='large' inverse='true'>

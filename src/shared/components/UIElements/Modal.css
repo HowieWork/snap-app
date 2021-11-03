@@ -4,7 +4,7 @@
   top: 20vh;
   left: 10%;
   width: 80%;
-  background: #fafafa;
+  background: #fff;
   box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.9);
   border-radius: 11px;
   overflow: hidden;
@@ -14,11 +14,11 @@
   width: 100%;
   text-align: center;
   padding: 1rem 0.5rem;
-  background: #fafafa;
   color: #333;
 }
 
 .modal__header h2 {
+  font-size: 2rem;
   margin: 0.5rem;
 }
 
