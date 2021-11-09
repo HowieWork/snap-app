@@ -64,7 +64,7 @@ Medium: 11px
 --- 07 WHITESPACE
 
 - Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 112 / 128
 
 --- 08 RESPONSIVE 
 - Web 1024px: 64em
@@ -114,10 +114,40 @@ body {
   text-align: center;
 }
 
-.center-flex {
+.center-flex-row {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.center-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data-found {
+  padding: 12.8rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #333;
+}
+
+.tiny-gap {
+  gap: 0.8rem;
+}
+.extra-small-gap {
+  gap: 1.6rem;
+}
+.small-gap {
+  gap: 2.4rem;
+}
+.medium-gap {
+  gap: 4.8rem;
+}
+.large-gap {
+  gap: 9.6rem;
 }
 
 /* CSS TRANSITIONS */

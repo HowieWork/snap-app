@@ -1,13 +1,12 @@
 import UserItem from './UserItem';
 
-import '../../index.css';
 import './UsersList.css';
 
 const UsersList = (props) => {
   if (props.items.length === 0) {
     return (
-      <div className='center-text'>
-        <p className='users-list-no-users-found'>No Users Found</p>
+      <div className='center-text no-data-found'>
+        <p>No Users Found.</p>
       </div>
     );
   }

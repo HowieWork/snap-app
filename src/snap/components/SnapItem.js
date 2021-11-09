@@ -31,13 +31,13 @@ const SnapItem = (props) => {
       <Modal
         show={showMap}
         onCancel={closeMapHandler}
-        header={`ICON ${props.address}`}
+        header={props.address}
         contentClass='snap-item__modal-content'
         footerClass='snap-item__modal-actions'
         footer={<Button onClick={closeMapHandler}>Close</Button>}
       >
         <div className='map-container'>
-          <Map center={props.coordinates} zoom={12} />
+          <Map center={props.coordinates} zoom={14} />
         </div>
       </Modal>
       <Modal
@@ -67,36 +67,25 @@ const SnapItem = (props) => {
           <div className='snap-item__image'>
             <img src={props.image} alt={props.title} />
           </div>
-          <div className='snap-item__info'>
-            <p className='snap-item__info-title'>{props.title}</p>
-            <p className='snap-item__info-address'>{props.address}</p>
-            <p className='snap-item__info-description'>{props.description}</p>
-          </div>
-          <div className='snap-item__actions'>
-            <Button onClick={openMapHandler}>View on Map</Button>
-            {auth.isLoggedIn && (
-              <Button to={`/snaps/${props.id}`} inverse>
-                Edit
-              </Button>
-            )}
-            {auth.isLoggedIn && (
-              <Button onClick={showDeleteWarningHandler} danger>
-                Delete
-              </Button>
-            )}
-            {/*FIXME <Button disabled>Button</Button>
-          <Button size='small'>Small Button</Button>
-          <Button size='large' inverse='true'>
-            Large Revs Btn
-          </Button>
-          <Button href='#' danger='true'>
-            Danger Anchor Btn
-          </Button>
-          <Button to='#'>Link Button</Button>
-
-          <button>View on map</button>
-          <button>Edit</button>
-          <button>Delete</button> */}
+          <div className='center-flex-column small-gap'>
+            <div className='center-flex-column extra-small-gap snap-item__info'>
+              <p className='snap-item__info-title'>{props.title}</p>
+              <p className='snap-item__info-address'>{props.address}</p>
+              <p className='snap-item__info-description'>{props.description}</p>
+            </div>
+            <div className='center-flex-row tiny-gap snap-item__actions'>
+              <Button onClick={openMapHandler}>View on Map</Button>
+              {auth.isLoggedIn && (
+                <Button to={`/snaps/${props.id}`} inverse>
+                  Edit
+                </Button>
+              )}
+              {auth.isLoggedIn && (
+                <Button onClick={showDeleteWarningHandler} danger>
+                  Delete
+                </Button>
+              )}
+            </div>
           </div>
         </li>
       </Card>

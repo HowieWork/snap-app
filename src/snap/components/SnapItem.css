@@ -1,8 +1,7 @@
 .snap-item {
-  line-height: 1.6;
   min-width: 20rem;
-  padding: 0;
   transition: all 0.3s;
+  padding: 0;
 }
 
 .snap-item:hover {
@@ -11,8 +10,8 @@
 }
 
 .snap-item__image {
-  height: 24rem;
-  margin-bottom: 3.2rem;
+  height: 20rem;
+  margin-bottom: 2.4rem;
 }
 
 .snap-item__image img {
@@ -23,30 +22,24 @@
 }
 
 .snap-item__info {
-  height: 16rem;
-  margin-bottom: 0.8rem;
+  height: 20rem;
   padding: 0 3.2rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
+  justify-content: flex-start;
 }
 .snap-item__info-title {
   font-size: 2.4rem;
   font-weight: 600;
   color: #333;
-  width: auto;
   text-align: center;
-  white-space: nowrap;
+  /* FIXME What if title is too long? How to show long title? */
+  /* white-space: nowrap;
   text-overflow: ellipsis;
-  /* overflow: hidden; */
+  overflow: hidden; */
 }
 
 .snap-item__info-address {
   font-size: 1.2rem;
   font-weight: 400;
-
   color: #767676;
 }
 
@@ -54,26 +47,19 @@
   font-size: 1.4rem;
   font-weight: 400;
   color: #767676;
+
+  line-height: 1.6;
+
+  /* FIXME What if description is too long? How to show? */
   overflow: hidden;
 }
 
 .snap-item__actions {
-  height: 8rem;
-
-  display: flex;
-  gap: 0.6rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.snap-item__actions button,
-.snap-item__actions a {
-  margin: 0.5rem;
+  margin-bottom: 3.2rem;
 }
 
 .map-container {
-  height: 20rem;
+  height: 32rem;
   width: 100%;
 }
 

@@ -8,7 +8,6 @@
   background: transparent;
   cursor: pointer;
   text-decoration: none;
-
   border: 1px solid #b2bec3;
   border-radius: 0.6rem;
   transition: all 0.3s;
@@ -57,4 +56,7 @@
 }
 .button--large {
   font-size: 1.6rem;
+}
+.button--extra-large {
+  font-size: 2.4rem;
 }

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
+import Button from '../FormElements/Button';
 import { AuthContext } from '../../context/auth-context';
 
 import './NavLinks.css';
@@ -9,7 +10,7 @@ const NavLinks = () => {
   const auth = useContext(AuthContext);
 
   return (
-    <ul className='nav-links'>
+    <ul className='center-flex-row medium-gap nav-links'>
       <li>
         <NavLink to='/' exact>
           All Users
@@ -32,7 +33,9 @@ const NavLinks = () => {
       )}
       {auth.isLoggedIn && (
         <li>
-          <button onClick={auth.logout}>Logout</button>
+          <Button type='button' size='large' onClick={auth.logout}>
+            Logout
+          </Button>
         </li>
       )}
     </ul>

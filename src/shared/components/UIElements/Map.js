@@ -5,13 +5,14 @@ const Map = (props) => {
   const mapRef = useRef();
 
   const { center, zoom } = props;
-  console.log(window);
-  console.log(window.google);
+
   useEffect(() => {
+    // 1) Create a map
     const map = new window.google.maps.Map(mapRef.current, {
       center: center,
       zoom: zoom,
     });
+    // 2) Place a marker
     new window.google.maps.Marker({ position: center, map: map });
   }, [center, zoom]);
 

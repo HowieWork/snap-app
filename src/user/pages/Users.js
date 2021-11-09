@@ -1,6 +1,7 @@
 import UsersList from '../components/UsersList';
 
 const Users = () => {
+  // Fetch USERS data
   const DUMMY_USERS = [
     {
       id: 'u1',
@@ -15,7 +16,7 @@ const Users = () => {
     {
       id: 'u2',
       name: 'Sam Skylar',
-      motto: 'I love living in the city!',
+      motto: 'I love living in the city! I love living in the city! I love!',
       email: 'sam@email.com',
       password: 'samlovessnap',
       image:
@@ -43,6 +44,7 @@ const Users = () => {
       snapCount: 3,
     },
   ];
+
   return <UsersList items={DUMMY_USERS}></UsersList>;
 };
 

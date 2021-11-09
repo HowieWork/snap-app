@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 
 import Input from '../../shared/components/FormElements/Input';
 import Button from '../../shared/components/FormElements/Button';
+import Card from '../../shared/components/UIElements/Card';
 import {
   VALIDATOR_REQUIRE,
   VALIDATOR_MINLENGTH,
@@ -100,50 +101,49 @@ const UpdateSnap = () => {
     console.log(formState.inputs);
   };
 
-  // BUG Error message won't be executed if no found
   if (!identifiedSnap)
     return (
-      <div className='center-text'>
-        {/* FIXME style error message */}
-        <p className='no-snaps-found'>Could not find snap!</p>
+      <div className='center-text no-data-found'>
+        <p>Could not find snap!</p>
       </div>
     );
 
   if (isLoading) {
     return (
-      <div className='center-text'>
-        {/* FIXME style error message */}
-        <p className='no-snaps-found'>Loading...</p>
+      <div className='center-text no-data-found'>
+        <p>Loading...</p>
       </div>
     );
   }
   return (
-    <form className='snap-form' onSubmit={snapUpdateSubmitHandler}>
-      <Input
-        id='title'
-        element='input'
-        type='text'
-        label='Title'
-        validators={[VALIDATOR_REQUIRE()]}
-        errorText='Please enter a valid title.'
-        initialValue={formState.inputs.title.value}
-        initialIsValid={formState.inputs.title.isValid}
-        onInput={inputHandler}
-      />
-      <Input
-        id='description'
-        element='textarea'
-        label='Description'
-        validators={[VALIDATOR_MINLENGTH(5)]}
-        errorText='Please enter a valid description (min. 5 characters).'
-        initialValue={formState.inputs.description.value}
-        initialIsValid={formState.inputs.description.isValid}
-        onInput={inputHandler}
-      />
-      <Button type='submit' disabled={!formState.isValid}>
-        Update snap
-      </Button>
-    </form>
+    <Card className='snap-form'>
+      <form className='snap-form' onSubmit={snapUpdateSubmitHandler}>
+        <Input
+          id='title'
+          element='input'
+          type='text'
+          label='Title'
+          validators={[VALIDATOR_REQUIRE()]}
+          errorText='Please enter a valid title.'
+          initialValue={formState.inputs.title.value}
+          initialIsValid={formState.inputs.title.isValid}
+          onInput={inputHandler}
+        />
+        <Input
+          id='description'
+          element='textarea'
+          label='Description'
+          validators={[VALIDATOR_MINLENGTH(5)]}
+          errorText='Please enter a valid description (min. 5 characters).'
+          initialValue={formState.inputs.description.value}
+          initialIsValid={formState.inputs.description.isValid}
+          onInput={inputHandler}
+        />
+        <Button type='submit' disabled={!formState.isValid}>
+          Update snap
+        </Button>
+      </form>
+    </Card>
   );
 };
 

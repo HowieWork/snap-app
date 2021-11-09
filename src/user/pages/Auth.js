@@ -31,12 +31,15 @@ const Auth = () => {
   );
 
   const switchModeHandler = () => {
+    // SIGNUP --> LOGIN
     if (!isLoginMode) {
       setFormData(
         { ...formState.inputs, name: undefined },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
-    } else {
+    }
+    // LOGIN --> SIGNUP
+    if (isLoginMode) {
       setFormData(
         {
           ...formState.inputs,
@@ -95,11 +98,11 @@ const Auth = () => {
             {isLoginMode ? 'Login' : 'Signup'}
           </Button>
           {isLoginMode ? (
-            <Button onClick={switchModeHandler} inverse>
+            <Button type='button' onClick={switchModeHandler} inverse>
               Join now
             </Button>
           ) : (
-            <Button onClick={switchModeHandler} inverse>
+            <Button type='button' onClick={switchModeHandler} inverse>
               Switch to login
             </Button>
           )}
