@@ -1,0 +1,13 @@
+.section-hero {
+  /* padding: 16rem 0; */
+}
+
+.hero-heading {
+  font-size: 8.6rem;
+  color: #333;
+}
+
+.hero-description {
+  font-size: 3rem;
+  color: #555;
+}

@@ -1,3 +1,6 @@
+import { Fragment } from 'react';
+
+import Hero from '../../shared/components/Hero/Hero';
 import UsersList from '../components/UsersList';
 
 const Users = () => {
@@ -45,7 +48,12 @@ const Users = () => {
     },
   ];
 
-  return <UsersList items={DUMMY_USERS}></UsersList>;
+  return (
+    <Fragment>
+      <Hero />
+      <UsersList items={DUMMY_USERS}></UsersList>
+    </Fragment>
+  );
 };
 
 export default Users;

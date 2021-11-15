@@ -1,5 +1,6 @@
 import { useParams } from 'react-router';
 import SnapList from '../components/SnapList';
+import Hero from '../../shared/components/Hero/Hero';
 
 const DUMMY_SNAPS = [
   {
