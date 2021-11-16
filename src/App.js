@@ -44,7 +44,9 @@ const App = () => {
         <Redirect to='/' />
       </Switch>
     );
-  } else {
+  }
+
+  if (!isLoggedIn) {
     routes = (
       <Switch>
         <Route path='/' exact>

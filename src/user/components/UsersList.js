@@ -19,7 +19,7 @@ const UsersList = (props) => {
           name={item.name}
           motto={item.motto}
           image={item.image}
-          snapCount={item.snapCount}
+          snapCount={item.snaps.length}
         />
       ))}
     </ul>

@@ -1,57 +1,54 @@
-import { Fragment } from 'react';
-
-import Hero from '../../shared/components/Hero/Hero';
+import { Fragment, useState, useEffect } from 'react';
+// TODO ADD HERO SECTION TO HOMEPAGE
+// import Hero from '../../shared/components/Hero/Hero';
 import UsersList from '../components/UsersList';
+import ErrorModal from '../../shared/components/UIElements/ErrorModal';
+import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 
 const Users = () => {
-  // Fetch USERS data
-  const DUMMY_USERS = [
-    {
-      id: 'u1',
-      name: 'Sam Skylar',
-      motto: 'I love living in the city!',
-      email: 'sam@email.com',
-      password: 'samlovessnap',
-      image:
-        'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-      snapCount: 3,
-    },
-    {
-      id: 'u2',
-      name: 'Sam Skylar',
-      motto: 'I love living in the city! I love living in the city! I love!',
-      email: 'sam@email.com',
-      password: 'samlovessnap',
-      image:
-        'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-      snapCount: 3,
-    },
-    {
-      id: 'u3',
-      name: 'Sam Skylar',
-      motto: 'I love living in the city!',
-      email: 'sam@email.com',
-      password: 'samlovessnap',
-      image:
-        'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-      snapCount: 3,
-    },
-    {
-      id: 'u4',
-      name: 'Sam Skylar',
-      motto: 'I love living in the city!',
-      email: 'sam@email.com',
-      password: 'samlovessnap',
-      image:
-        'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80',
-      snapCount: 3,
-    },
-  ];
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState();
+  const [loadedUsers, setLoadedUsers] = useState();
+
+  useEffect(() => {
+    // Fetch USERS data
+    const sendRequest = async () => {
+      setIsLoading(true);
+
+      try {
+        const response = await fetch('http://localhost:8000/api/users');
+        const responseData = await response.json();
+
+        if (!response.ok) {
+          throw new Error(responseData.message);
+        }
+
+        setLoadedUsers(responseData.users);
+      } catch (err) {
+        setError(err.message);
+      }
+
+      setIsLoading(false);
+    };
+
+    sendRequest();
+  }, []);
+
+  const errorHandler = () => {
+    setError(null);
+  };
 
   return (
     <Fragment>
-      <Hero />
-      <UsersList items={DUMMY_USERS}></UsersList>
+      <ErrorModal error={error} onClear={errorHandler} />
+      {isLoading && (
+        <div className='center-flex-row'>
+          <LoadingSpinner />
+        </div>
+      )}
+      {/* TODO ADD HERO SECTION TO HOMEPAGE*/}
+      {/* <Hero /> */}
+      {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
     </Fragment>
   );
 };
