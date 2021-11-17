@@ -11,9 +11,6 @@ const Users = () => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [loadedUsers, setLoadedUsers] = useState();
 
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [error, setError] = useState();
-
   useEffect(() => {
     // Fetch USERS data
     const fetchUsers = async () => {
