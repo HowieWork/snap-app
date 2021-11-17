@@ -69,7 +69,7 @@ const Auth = () => {
     // LOG IN
     if (isLoginMode) {
       try {
-        await sendRequest(
+        const responseData = await sendRequest(
           'http://localhost:8000/api/users/login',
           'POST',
           JSON.stringify({
@@ -80,14 +80,16 @@ const Auth = () => {
             'Content-Type': 'application/json',
           }
         );
-        auth.login();
+
+        // SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
+        auth.login(responseData.user.id);
       } catch (err) {}
     }
 
     // SIGN UP
     if (!isLoginMode) {
       try {
-        await sendRequest(
+        const responseData = await sendRequest(
           'http://localhost:8000/api/users/signup',
           'POST',
           JSON.stringify({
@@ -99,7 +101,9 @@ const Auth = () => {
             'Content-Type': 'application/json',
           }
         );
-        auth.login();
+
+        // SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
+        auth.login(responseData.user.id);
       } catch (err) {}
     }
   };
