@@ -4,11 +4,15 @@ import Card from '../../shared/components/UIElements/Card';
 import Button from '../../shared/components/FormElements/Button';
 import Modal from '../../shared/components/UIElements/Modal';
 import Map from '../../shared/components/UIElements/Map';
+import ErrorModal from '../../shared/components/UIElements/ErrorModal';
+import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 import { AuthContext } from '../../shared/context/auth-context';
+import { useHttpClient } from '../../shared/hooks/http-hook';
 
 import './SnapItem.css';
 
 const SnapItem = (props) => {
+  const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const auth = useContext(AuthContext);
   const [showMap, setShowMap] = useState(false);
   const [showConfirmModal, setShowConfirmModal] = useState(false);
@@ -21,13 +25,21 @@ const SnapItem = (props) => {
   const cancelDeleteHandler = () => {
     setShowConfirmModal(false);
   };
-  const confirmDeleteHandler = () => {
+  const confirmDeleteHandler = async () => {
     setShowConfirmModal(false);
-    console.log('DELETING...');
+    // console.log('DELETING...');
+    try {
+      await sendRequest(
+        `http://localhost:8000/api/snaps/${props.id}`,
+        'DELETE'
+      );
+      props.onDelete(props.id);
+    } catch (err) {}
   };
 
   return (
     <Fragment>
+      <ErrorModal error={error} onClear={clearError} />
       <Modal
         show={showMap}
         onCancel={closeMapHandler}
@@ -63,6 +75,7 @@ const SnapItem = (props) => {
         </p>
       </Modal>
       <Card className='snap-item'>
+        {isLoading && <LoadingSpinner asOverlay />}
         <li>
           <div className='snap-item__image'>
             <img src={props.image} alt={props.title} />
@@ -75,12 +88,12 @@ const SnapItem = (props) => {
             </div>
             <div className='center-flex-row tiny-gap snap-item__actions'>
               <Button onClick={openMapHandler}>View on Map</Button>
-              {auth.isLoggedIn && (
+              {auth.userId === props.creatorId && (
                 <Button to={`/snaps/${props.id}`} inverse>
                   Edit
                 </Button>
               )}
-              {auth.isLoggedIn && (
+              {auth.userId === props.creatorId && (
                 <Button onClick={showDeleteWarningHandler} danger>
                   Delete
                 </Button>

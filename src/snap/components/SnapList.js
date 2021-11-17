@@ -26,6 +26,7 @@ const SnapList = (props) => {
           address={snap.address}
           creatorId={snap.creator}
           coordinates={snap.location}
+          onDelete={props.onDeleteSnap}
         />
       ))}
     </ul>

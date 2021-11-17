@@ -72,6 +72,12 @@ const UserSnaps = () => {
     fetchSnaps();
   }, [sendRequest, userId]);
 
+  const snapDeletedHandler = (deletedSnapId) => {
+    setLoadedSnaps((prevSnaps) =>
+      prevSnaps.filter((snap) => snap.id !== deletedSnapId)
+    );
+  };
+
   return (
     <Fragment>
       <ErrorModal error={error} onClear={clearError} />
@@ -80,7 +86,10 @@ const UserSnaps = () => {
           <LoadingSpinner />
         </div>
       )}
-      {!isLoading && loadedSnaps && <SnapList items={loadedSnaps} />};
+      {!isLoading && loadedSnaps && (
+        <SnapList items={loadedSnaps} onDeleteSnap={snapDeletedHandler} />
+      )}
+      ;
     </Fragment>
   );
 };
