@@ -12,7 +12,7 @@ const Users = () => {
   const [loadedUsers, setLoadedUsers] = useState();
 
   useEffect(() => {
-    // Fetch USERS data
+    // FETCH USERS
     const fetchUsers = async () => {
       try {
         const responseData = await sendRequest(

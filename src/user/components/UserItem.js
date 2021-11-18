@@ -9,7 +9,10 @@ const UserItem = (props) => {
     <Card className='user-item'>
       <li className='center-flex-column medium-gap'>
         <div className='user-item__image'>
-          <Avatar image={props.image} alt={props.name} />
+          <Avatar
+            image={`http://localhost:8000/${props.image}`}
+            alt={props.name}
+          />
         </div>
         <div className='user-item__info'>
           <p className='user-item__info-name'>{props.name}</p>

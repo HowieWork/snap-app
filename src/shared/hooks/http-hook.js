@@ -5,7 +5,7 @@ export const useHttpClient = () => {
   const [error, setError] = useState();
 
   // FOR ABORT HTTP REQUESTS BEFORE COMPLETED
-  // USEREF: LIKE AN INSTANCE VARIABLE CARRIED OVER AFTER RERENDER
+  // USEREF: LIKE AN INSTANCE VARIABLE CARRIED OVER AFTER RERENDERS
   // AN ARRAY OF CONTROLLER OBJECTS
   const activeHttpRequests = useRef([]);
 
@@ -29,7 +29,7 @@ export const useHttpClient = () => {
         // FIXME BELOW 404 IS WHAT I ADDED, NOT SURE IF CORRECT
         // HANDLING 404: NO ROUTE FOUND
         if (response.status === 404) {
-          throw new Error('Could not find the route.');
+          throw new Error('Not found');
         }
 
         const responseData = await response.json();
