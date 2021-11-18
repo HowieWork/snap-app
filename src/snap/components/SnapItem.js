@@ -78,7 +78,11 @@ const SnapItem = (props) => {
         {isLoading && <LoadingSpinner asOverlay />}
         <li>
           <div className='snap-item__image'>
-            <img src={props.image} alt={props.title} />
+            <img
+              src={`http://localhost:8000/${props.image}`}
+              // src='http://localhost:8000/uploads/images/5d727aa0-48ca-11ec-96e6-258a17f4d3f7.jpeg'
+              alt={props.title}
+            />
           </div>
           <div className='center-flex-column small-gap'>
             <div className='center-flex-column extra-small-gap snap-item__info'>

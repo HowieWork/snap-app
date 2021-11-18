@@ -96,12 +96,15 @@ const Auth = () => {
     // SIGN UP
     if (!isLoginMode) {
       try {
-        // REQUEST BODY IS FORMDATA
+        // REQUEST BODY: FORMDATA
         const formData = new FormData();
         formData.append('email', formState.inputs.email.value);
         formData.append('name', formState.inputs.name.value);
         formData.append('password', formState.inputs.password.value);
         formData.append('image', formState.inputs.image.value);
+
+        console.log(formData);
+
         const responseData = await sendRequest(
           'http://localhost:8000/api/users/signup',
           'POST',
@@ -145,8 +148,8 @@ const Auth = () => {
             <ImageUpload
               id='image'
               center
-              // FIXME HOW TO SHOW errorText?
-              // errorText='Please pick an image.'
+              // FIXME HOW TO SHOW errorText? ADD TEXT
+              errorText=''
               onInput={inputHandler}
             />
           )}

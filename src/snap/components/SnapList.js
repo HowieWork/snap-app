@@ -20,7 +20,7 @@ const SnapList = (props) => {
         <SnapItem
           key={snap.id}
           id={snap.id}
-          image={snap.imageUrl}
+          image={snap.image}
           title={snap.title}
           description={snap.description}
           address={snap.address}

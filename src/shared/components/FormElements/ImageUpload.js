@@ -66,6 +66,7 @@ const ImageUpload = (props) => {
         <Button type='button' onClick={pickImageHandler}>
           Pick image
         </Button>
+        {/* FIXME HAVEN'T SHOW ERROR TEXT YET */}
         {!isValid && <p>{props.errorText}</p>}
       </div>
     </div>
