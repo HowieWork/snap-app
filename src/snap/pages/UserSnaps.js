@@ -58,7 +58,6 @@ const UserSnaps = () => {
   const userId = useParams().userId;
 
   useEffect(() => {
-    console.log('USEEFFECT STARTS!');
     // SEND GET REQUEST
     // http://localhost:8000/api/snaps/user/:uid
     const fetchSnaps = async () => {

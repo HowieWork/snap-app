@@ -31,7 +31,9 @@ const SnapItem = (props) => {
     try {
       await sendRequest(
         `http://localhost:8000/api/snaps/${props.id}`,
-        'DELETE'
+        'DELETE',
+        null,
+        { Authorization: 'Bearer ' + auth.token }
       );
       props.onDelete(props.id);
     } catch (err) {}

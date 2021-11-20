@@ -66,7 +66,8 @@ const NewSnap = () => {
       await sendRequest(
         'http://localhost:8000/api/snaps/',
         'POST',
-        formData
+        formData,
+        { Authorization: 'Bearer ' + auth.token }
         // JSON.stringify({
         //   title: formState.inputs.title.value,
         //   description: formState.inputs.description.value,

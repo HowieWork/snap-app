@@ -44,7 +44,12 @@ const Auth = () => {
     // SIGNUP --> LOGIN
     if (!isLoginMode) {
       setFormData(
-        { ...formState.inputs, name: undefined, image: undefined },
+        {
+          ...formState.inputs,
+          name: undefined,
+          image: undefined,
+          motto: undefined,
+        },
         formState.inputs.email.isValid && formState.inputs.password.isValid
       );
     }
@@ -61,6 +66,10 @@ const Auth = () => {
             value: null,
             isValid: false,
           },
+          motto: {
+            value: '',
+            isValid: false,
+          },
         },
         false
       );
@@ -70,8 +79,6 @@ const Auth = () => {
 
   const authSubmitHandler = async (event) => {
     event.preventDefault();
-
-    console.log(formState.inputs);
 
     // LOG IN
     if (isLoginMode) {
@@ -89,7 +96,7 @@ const Auth = () => {
         );
 
         // SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
-        auth.login(responseData.user.id);
+        auth.login(responseData.userId, responseData.token);
       } catch (err) {}
     }
 
@@ -101,9 +108,8 @@ const Auth = () => {
         formData.append('email', formState.inputs.email.value);
         formData.append('name', formState.inputs.name.value);
         formData.append('password', formState.inputs.password.value);
+        formData.append('motto', formState.inputs.motto.value);
         formData.append('image', formState.inputs.image.value);
-
-        console.log(formData);
 
         const responseData = await sendRequest(
           'http://localhost:8000/api/users/signup',
@@ -119,9 +125,8 @@ const Auth = () => {
           // }
         );
 
-        // FIXME UPDATE LOGIN ARGUMENT DUE TO CHANGE OF RESPONSEDATA
         // NOTE SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
-        auth.login(responseData.user.id);
+        auth.login(responseData.userId, responseData.token);
       } catch (err) {}
     }
   };
@@ -151,6 +156,19 @@ const Auth = () => {
               center
               // FIXME HOW TO SHOW errorText? ADD TEXT
               errorText=''
+              onInput={inputHandler}
+            />
+          )}
+          {/* FIXME UPDATE MOTTO LABEL & PLACEHOLDER */}
+          {!isLoginMode && (
+            <Input
+              element='input'
+              id='motto'
+              type='motto'
+              label='Motto'
+              validators={[VALIDATOR_REQUIRE()]}
+              placeholder='PLACEHOLDER TEXT TO ENCOURAGE PEOPLE TO WRITE WHY THEY JOIN SNAP'
+              errorText='Please enter a motto.'
               onInput={inputHandler}
             />
           )}
