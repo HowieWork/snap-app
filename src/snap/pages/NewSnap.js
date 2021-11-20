@@ -60,7 +60,6 @@ const NewSnap = () => {
       formData.append('address', formState.inputs.address.value);
       formData.append('creator', auth.userId);
       formData.append('image', formState.inputs.image.value);
-      console.log(formData);
 
       // POST REQUEST TO BACKEND
       // http://localhost:8000/api/snaps/

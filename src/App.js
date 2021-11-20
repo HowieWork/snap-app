@@ -15,6 +15,7 @@ import UpdateSnap from './snap/pages/UpdateSnap';
 import { AuthContext } from './shared/context/auth-context';
 
 const App = () => {
+  // TODO ADD TOKEN STATE
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState(null);
 

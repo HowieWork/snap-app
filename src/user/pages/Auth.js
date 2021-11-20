@@ -119,7 +119,8 @@ const Auth = () => {
           // }
         );
 
-        // SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
+        // FIXME UPDATE LOGIN ARGUMENT DUE TO CHANGE OF RESPONSEDATA
+        // NOTE SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
         auth.login(responseData.user.id);
       } catch (err) {}
     }
