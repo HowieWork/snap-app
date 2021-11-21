@@ -58,7 +58,8 @@ const NewSnap = () => {
       formData.append('title', formState.inputs.title.value);
       formData.append('description', formState.inputs.description.value);
       formData.append('address', formState.inputs.address.value);
-      formData.append('creator', auth.userId);
+      // NOTE NO NEED APPEND CREATOR, SINCE RELAVANT INFO WILL BE PROVIDED BY REQUEST USERDATA BACKEND
+      // formData.append('creator', auth.userId);
       formData.append('image', formState.inputs.image.value);
 
       // POST REQUEST TO BACKEND
