@@ -65,7 +65,7 @@ const NewSnap = () => {
       // POST REQUEST TO BACKEND
       // http://localhost:8000/api/snaps/
       await sendRequest(
-        'http://localhost:8000/api/snaps/',
+        `${process.env.REACT_APP_BACKEND_URL}/snaps/`,
         'POST',
         formData,
         { Authorization: 'Bearer ' + auth.token }

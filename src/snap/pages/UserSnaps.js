@@ -63,7 +63,7 @@ const UserSnaps = () => {
     const fetchSnaps = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:8000/api/snaps/user/${userId}`
+          `${process.env.REACT_APP_BACKEND_URL}/snaps/user/${userId}`
         );
         setLoadedSnaps(responseData.snaps);
       } catch (err) {}

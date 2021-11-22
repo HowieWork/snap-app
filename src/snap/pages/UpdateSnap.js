@@ -86,7 +86,7 @@ const UpdateSnap = () => {
     const fetchSnap = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:8000/api/snaps/${snapId}`
+          `${process.env.REACT_APP_BACKEND_URL}/snaps/${snapId}`
         );
         setLoadedSnap(responseData.snap);
         setFormData(

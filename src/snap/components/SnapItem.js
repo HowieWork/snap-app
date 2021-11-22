@@ -30,7 +30,7 @@ const SnapItem = (props) => {
     // console.log('DELETING...');
     try {
       await sendRequest(
-        `http://localhost:8000/api/snaps/${props.id}`,
+        `${process.env.REACT_APP_BACKEND_URL}/snaps/${props.id}`,
         'DELETE',
         null,
         { Authorization: 'Bearer ' + auth.token }
@@ -81,7 +81,7 @@ const SnapItem = (props) => {
         <li>
           <div className='snap-item__image'>
             <img
-              src={`http://localhost:8000/${props.image}`}
+              src={`${process.env.REACT_APP_ASSET_URL}/${props.image}`}
               // src='http://localhost:8000/uploads/images/5d727aa0-48ca-11ec-96e6-258a17f4d3f7.jpeg'
               alt={props.title}
             />
