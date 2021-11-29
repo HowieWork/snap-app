@@ -118,7 +118,7 @@ const NewSnap = () => {
             errorText='Please enter a valid address.'
             onInput={inputHandler}
           />
-          <Button type='submit' disabled={!formState.isValid}>
+          <Button type='submit' secondary disabled={!formState.isValid}>
             Add Snap
           </Button>
         </form>

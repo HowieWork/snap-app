@@ -11,18 +11,21 @@ const UsersList = (props) => {
     );
   }
   return (
-    <ul className='users-list'>
-      {props.items.map((item) => (
-        <UserItem
-          key={item.id}
-          id={item.id}
-          name={item.name}
-          motto={item.motto}
-          image={item.image}
-          snapCount={item.snaps.length}
-        />
-      ))}
-    </ul>
+    <div className='users-section center-text'>
+      <h2>HIGHLIGHTS</h2>
+      <ul className='users-list'>
+        {props.items.map((item) => (
+          <UserItem
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            motto={item.motto}
+            image={item.image}
+            snapCount={item.snaps.length}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 

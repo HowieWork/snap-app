@@ -1,13 +1,56 @@
 .section-hero {
   /* padding: 16rem 0; */
+  /* FIXME UPDATE HEIGHT */
+  height: 45vh;
+
+  position: relative;
+
+  /* background-color: orange; */
+
+  /* BACKGROUND IMAGE */
+  background-image: linear-gradient(0deg, #3333334d, #3333334d),
+    url(../../../images/hero-bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: normal;
 }
 
 .hero-heading {
-  font-size: 8.6rem;
-  color: #333;
+  font-size: 4.4rem;
+  color: #fff;
+  text-shadow: 0px 7px 30px #333333cc;
 }
 
 .hero-description {
-  font-size: 3rem;
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0px 7px 30px #333333cc;
+}
+
+.hero-cta {
+  position: absolute;
+  top: 100%;
+  transform: translate(0%, -50%);
+}
+
+.hero-cta--actions {
+  position: relative;
+}
+
+.hero-cta--actions button {
+  box-shadow: 0px 8px 20px rgb(0, 0, 0, 6%);
+}
+
+.hero-cta--text {
+  font-size: 1.2rem;
   color: #555;
+
+  position: absolute;
+  top: 100%;
+  transform: translate(0, 0.8rem);
+}
+
+.hero-cta--text span {
+  font-weight: 500;
+  color: #333;
 }

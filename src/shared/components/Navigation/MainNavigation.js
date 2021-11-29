@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BsFillCameraFill } from 'react-icons/bs';
 
 import MainHeader from './MainHeader';
 import SideDrawer from './SideDrawer';
@@ -27,8 +28,9 @@ const MainNavigation = () => {
       </SideDrawer>
       {drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}
       <MainHeader>
-        <h1 className='main-navigation__title'>
-          <Link to='/'>Snap</Link>
+        <h1 className='center-flex-row tiny-gap main-navigation__title'>
+          <BsFillCameraFill title='camera icon' />
+          <Link to='/'>snap</Link>
         </h1>
         <nav className='main-navigation__links'>
           <NavLinks />

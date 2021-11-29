@@ -63,7 +63,7 @@ const ImageUpload = (props) => {
           {previewUrl && <img src={previewUrl} alt='preview' />}
           {!previewUrl && <p>Please pick an image.</p>}
         </div>
-        <Button type='button' onClick={pickImageHandler}>
+        <Button type='button' secondary onClick={pickImageHandler}>
           Pick image
         </Button>
         {/* FIXME HAVEN'T SHOW ERROR TEXT YET */}

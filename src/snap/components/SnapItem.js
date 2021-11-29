@@ -48,7 +48,11 @@ const SnapItem = (props) => {
         header={props.address}
         contentClass='snap-item__modal-content'
         footerClass='snap-item__modal-actions'
-        footer={<Button onClick={closeMapHandler}>Close</Button>}
+        footer={
+          <Button onClick={closeMapHandler} secondary>
+            Close
+          </Button>
+        }
       >
         <div className='map-container'>
           <Map center={props.coordinates} zoom={14} />
@@ -62,10 +66,10 @@ const SnapItem = (props) => {
         footerClass='snap-item__modal-actions'
         footer={
           <Fragment>
-            <Button onClick={cancelDeleteHandler} inverse>
+            <Button onClick={cancelDeleteHandler} inverse secondary>
               Cancel
             </Button>
-            <Button onClick={confirmDeleteHandler} danger>
+            <Button onClick={confirmDeleteHandler} danger secondary>
               Delete
             </Button>
           </Fragment>
@@ -93,14 +97,16 @@ const SnapItem = (props) => {
               <p className='snap-item__info-description'>{props.description}</p>
             </div>
             <div className='center-flex-row tiny-gap snap-item__actions'>
-              <Button onClick={openMapHandler}>View on Map</Button>
+              <Button onClick={openMapHandler} secondary>
+                View on Map
+              </Button>
               {auth.userId === props.creatorId && (
-                <Button to={`/snaps/${props.id}`} inverse>
+                <Button to={`/snaps/${props.id}`} secondary inverse>
                   Edit
                 </Button>
               )}
               {auth.userId === props.creatorId && (
-                <Button onClick={showDeleteWarningHandler} danger>
+                <Button onClick={showDeleteWarningHandler} secondary danger>
                   Delete
                 </Button>
               )}

@@ -20,9 +20,14 @@
 .main-navigation__title a:visited,
 .main-navigation__title a:hover,
 .main-navigation__title a:active {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
   text-decoration: none;
+  color: #333;
+}
+
+.main-navigation__title svg {
+  font-size: 2.4rem;
   color: #333;
 }
 

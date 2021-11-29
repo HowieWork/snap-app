@@ -191,15 +191,25 @@ const Auth = () => {
             onInput={inputHandler}
           />
           <div className='authentication-form-actions'>
-            <Button type='submit' disabled={!formState.isValid}>
+            <Button type='submit' secondary disabled={!formState.isValid}>
               {isLoginMode ? 'Login' : 'Signup'}
             </Button>
             {isLoginMode ? (
-              <Button type='button' onClick={switchModeHandler} inverse>
+              <Button
+                type='button'
+                onClick={switchModeHandler}
+                inverse
+                secondary
+              >
                 Join now
               </Button>
             ) : (
-              <Button type='button' onClick={switchModeHandler} inverse>
+              <Button
+                type='button'
+                onClick={switchModeHandler}
+                inverse
+                secondary
+              >
                 Switch to login
               </Button>
             )}

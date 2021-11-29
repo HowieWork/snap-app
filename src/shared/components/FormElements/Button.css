@@ -4,13 +4,25 @@
   font-weight: 600;
   font-size: 1.4rem;
   padding: 0.6rem 1.2rem;
-  color: #767676;
-  background: transparent;
+  /* color: #767676; */
+  /* background: transparent; */
   cursor: pointer;
   text-decoration: none;
-  border: 1px solid #b2bec3;
+  /* border: 1px solid #b2bec3; */
   border-radius: 0.6rem;
   transition: all 0.3s;
+}
+
+.button--primary {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.button--secondary {
+  background: transparent;
+  color: #767676;
+  border: 1px solid #b2bec3;
 }
 
 .button:focus {
@@ -22,6 +34,10 @@
 .button:focus {
   color: #333;
   border-color: #333;
+}
+
+.button--white-bg {
+  background: #fff;
 }
 
 .button--inverse:hover,
@@ -54,9 +70,9 @@
 .button--small {
   font-size: 0.8rem;
 }
-.button--large {
+.button--medium {
   font-size: 1.6rem;
 }
-.button--extra-large {
+.button--large {
   font-size: 2.4rem;
 }

@@ -28,12 +28,16 @@ const NavLinks = () => {
       )}
       {!auth.isLoggedIn && (
         <li>
-          <NavLink to='/auth'>Get Started</NavLink>
+          {/* <NavLink to='/auth'>Get Started</NavLink>
+           */}
+          <Button to='/auth' type='button' size='medium' secondary>
+            Get Started
+          </Button>
         </li>
       )}
       {auth.isLoggedIn && (
         <li>
-          <Button type='button' size='large' onClick={auth.logout}>
+          <Button type='button' size='medium' secondary onClick={auth.logout}>
             Logout
           </Button>
         </li>

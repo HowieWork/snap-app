@@ -1,7 +1,9 @@
 import { Fragment, useState, useEffect } from 'react';
-// TODO ADD HERO SECTION TO HOMEPAGE
-// import Hero from '../../shared/components/Hero/Hero';
+import Hero from '../../shared/components/Hero/Hero';
+import Features from '../../shared/components/Features/Features';
 import UsersList from '../components/UsersList';
+import CallToAction from '../../shared/components/CallToAction/CallToAction';
+import Footer from '../../shared/components/Footer/Footer';
 import ErrorModal from '../../shared/components/UIElements/ErrorModal';
 import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 
@@ -32,9 +34,11 @@ const Users = () => {
           <LoadingSpinner />
         </div>
       )}
-      {/* TODO ADD HERO SECTION TO HOMEPAGE*/}
-      {/* <Hero /> */}
+      <Hero />
+      <Features />
       {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
+      <CallToAction />
+      <Footer />
     </Fragment>
   );
 };

@@ -10,7 +10,11 @@ const ErrorModal = (props) => {
       onCancel={props.onClear}
       header='An Error Occurred!'
       show={!!props.error}
-      footer={<Button onClick={props.onClear}>Okay</Button>}
+      footer={
+        <Button onClick={props.onClear} secondary>
+          Okay
+        </Button>
+      }
     >
       {/* TODO IS THIS ERROR-MODAL-TEXT GOOD WAY? */}
       <p className='error-modal-text'>{props.error}</p>
