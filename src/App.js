@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import MainNavigation from './shared/components/Navigation/MainNavigation';
+import Footer from './shared/components/Footer/Footer';
 import Users from './user/pages/Users';
 import Auth from './user/pages/Auth';
 import UserSnaps from './snap/pages/UserSnaps';
@@ -69,6 +70,7 @@ const App = () => {
       <Router>
         <MainNavigation />
         <main>{routes}</main>
+        <Footer />
       </Router>
     </AuthContext.Provider>
   );
