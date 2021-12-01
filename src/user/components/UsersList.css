@@ -1,5 +1,5 @@
 .users-section {
-  padding: 4.8rem 8rem;
+  padding: 6.4rem 8rem;
 }
 
 .users-section h2 {
@@ -7,7 +7,7 @@
   color: #767676;
   font-weight: 500;
 
-  margin-bottom: 3.2rem;
+  margin-bottom: 6.4rem;
 }
 
 .users-list {
@@ -18,7 +18,7 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 6.4rem;
 }
 
 @media (max-width: 1024px) {

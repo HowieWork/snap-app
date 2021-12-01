@@ -169,7 +169,7 @@ const UpdateSnap = () => {
               initialIsValid={true}
               onInput={inputHandler}
             />
-            <Button type='submit' disabled={!formState.isValid}>
+            <Button secondary type='submit' disabled={!formState.isValid}>
               Update snap
             </Button>
           </form>

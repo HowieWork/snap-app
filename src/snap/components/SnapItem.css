@@ -39,8 +39,9 @@
 
 .snap-item__info-address {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #767676;
+  text-align: center;
 }
 
 .snap-item__info-description {
@@ -49,9 +50,17 @@
   color: #767676;
 
   line-height: 1.6;
+}
 
-  /* FIXME What if description is too long? How to show? */
-  overflow: hidden;
+/* hide scrollbar but allow scrolling */
+.snap-item__info-description {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+.snap-item__info-description::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 .snap-item__actions {
