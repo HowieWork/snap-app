@@ -15,9 +15,8 @@ const CallToAction = () => {
   return (
     <div className='CTA-section center-flex-column extra-small-gap'>
       <p className='CTA-section--text'>Join us. Start your journey here.</p>
-      {/* TODO IMPLEMENT UPLOAD A SNAP FEATURE */}
-      <Button type='button' primary inverse size='medium'>
-        Upload a snap
+      <Button to='/auth' type='button' size='medium' primary inverse>
+        Get Started
       </Button>
     </div>
   );

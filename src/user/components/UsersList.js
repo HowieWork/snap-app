@@ -11,7 +11,7 @@ const UsersList = (props) => {
     );
   }
   return (
-    <div className='users-section center-text'>
+    <div className='users-section center-text' id='users'>
       <h2>HIGHLIGHTS</h2>
       <ul className='users-list'>
         {props.items.map((item) => (

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 import Button from '../FormElements/Button';
 import { AuthContext } from '../../context/auth-context';
@@ -12,9 +13,16 @@ const NavLinks = () => {
   return (
     <ul className='center-flex-row medium-gap nav-links'>
       <li>
-        <NavLink to='/' exact>
+        {/* NOTE NAVLINK NOT WORKING WITH HASH, BUT USE NAVHASHLINK PROVIDED BY REACT-ROUTER-HASH-LINK IS FIX */}
+        {/* <NavLink
+          to='/'
+          exact
+        >
           All Users
-        </NavLink>
+        </NavLink> */}
+        <NavHashLink smooth to='/#users' exact>
+          All Users
+        </NavHashLink>
       </li>
       {auth.isLoggedIn && (
         <li>

@@ -1,0 +1,22 @@
+.user-info {
+  padding: 6.4rem 0 3.2rem;
+}
+
+.user-info__image {
+  width: 6.4rem;
+  height: 6.4rem;
+
+  margin-bottom: 1.6rem;
+}
+
+.user-info__name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.user-info__text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #767676;
+}
