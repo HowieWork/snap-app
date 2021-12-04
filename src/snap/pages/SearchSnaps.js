@@ -20,33 +20,26 @@ const SearchSnaps = () => {
   // GET KEYWORD FROM URL FOR THE FIRST TIME
   const keyword = useParams().keyword;
 
-  // DEFINE FETCH SNAPS FUNCTION
-  const fetchSnaps = useCallback(
-    async (keyword) => {
+  // RUN EACH RENDERING
+  useEffect(() => {
+    // DEFINE FETCH SNAPS FUNCTION
+    const fetchSnaps = async (keyword) => {
       try {
         const responseData = await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/snaps/search/${keyword}`
         );
         setLoadedSnaps(responseData.snaps);
       } catch (err) {}
-    },
-    [sendRequest]
-  );
-
-  // RUN ONCE AFTER FIRST RENDERING
-  useEffect(() => {
-    // INITIAL FETCH SNAPS MATCHING KEYWORD
+    };
+    // FETCH SNAPS MATCHING KEYWORD
     if (keyword) fetchSnaps(keyword);
-  }, [fetchSnaps, keyword]);
+  }, [keyword, sendRequest]);
 
   // SUBMIT SEARCH FORM
   const searchSubmitHandler = (event) => {
     event.preventDefault();
 
     history.push(`/search/${searchState}`);
-    // FETCH SNAPS MATCHING SEARCH STATE
-    // .../search/${searchState};
-    fetchSnaps(searchState);
   };
 
   const searchStateHandler = useCallback((keyword) => {
