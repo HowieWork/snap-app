@@ -1,0 +1,25 @@
+.random-hero {
+  padding: 2.4rem;
+  height: 25vh;
+}
+
+.random-hero-text {
+  font-size: 1.8rem;
+  color: #555;
+}
+
+.random-snap {
+  width: 24%;
+}
+
+@media (max-width: 1024px) {
+  .random-snap {
+    width: 36%;
+  }
+}
+
+@media (max-width: 384px) {
+  .random-snap {
+    width: 60%;
+  }
+}

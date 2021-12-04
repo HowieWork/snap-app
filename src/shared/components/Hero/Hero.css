@@ -9,7 +9,7 @@
 
   /* BACKGROUND IMAGE */
   background-image: linear-gradient(0deg, #3333334d, #3333334d),
-    url(../../../images/hero-bg.webp);
+    url(../../../assets/hero-bg.webp);
   background-size: cover;
   background-position: center;
   background-blend-mode: normal;

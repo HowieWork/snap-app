@@ -111,7 +111,7 @@ const UpdateSnap = () => {
     // console.log(formState.inputs);
     try {
       await sendRequest(
-        `http://localhost:8000/api/snaps/${snapId}`,
+        `${process.env.REACT_APP_BACKEND_URL}/snaps/${snapId}`,
         'PATCH',
         JSON.stringify({
           title: formState.inputs.title.value,

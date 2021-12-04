@@ -1,0 +1,30 @@
+.search-bar {
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.4);
+
+  background-color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+.search-bar-label {
+  display: none;
+}
+
+.search-bar-icon {
+  padding-left: 0.8rem;
+}
+
+.search-bar-input {
+  border: none;
+  font-size: 1.6rem;
+  padding: 0.6rem 3.2rem 0.6rem 0rem;
+  border: none;
+  border-radius: 0 0.6rem 0.6rem 0;
+
+  /* SEARCH ICON AS BG: ALTERNATIVE */
+  /* background: url('../../../assets/search-icon.svg') 6px no-repeat; */
+}
+
+.search-bar-input:focus {
+  outline: none;
+}

@@ -1,0 +1,14 @@
+.search-hero {
+  padding: 2.4rem;
+  height: 25vh;
+}
+
+.search-hero-text {
+  font-size: 1.8rem;
+  color: #555;
+}
+
+.search-hero-keyword {
+  font-size: 1.8rem;
+  font-weight: 500;
+}

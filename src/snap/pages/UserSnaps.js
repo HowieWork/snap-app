@@ -72,6 +72,7 @@ const UserSnaps = () => {
       } catch (err) {}
     };
     fetchUser();
+
     // 2) FETCH SNAPS
     // http://localhost:8000/api/snaps/user/:uid
     const fetchSnaps = async () => {

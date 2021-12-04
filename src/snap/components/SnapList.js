@@ -5,7 +5,6 @@ import '../../index.css';
 import './SnapList.css';
 
 const SnapList = (props) => {
-  console.log(props);
   if (props.items.length === 0) {
     return (
       <div className='center-flex-column medium-gap no-data-found'>

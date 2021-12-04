@@ -10,6 +10,8 @@ import Footer from './shared/components/Footer/Footer';
 import Users from './user/pages/Users';
 import Auth from './user/pages/Auth';
 import UserSnaps from './snap/pages/UserSnaps';
+import RandomSnap from './snap/pages/RandomSnap';
+import SearchSnaps from './snap/pages/SearchSnaps';
 import NewSnap from './snap/pages/NewSnap';
 import UpdateSnap from './snap/pages/UpdateSnap';
 import { AuthContext } from './shared/context/auth-context';
@@ -28,6 +30,12 @@ const App = () => {
         </Route>
         <Route path='/:userId/snaps' exact>
           <UserSnaps />
+        </Route>
+        <Route path='/random' exact>
+          <RandomSnap />
+        </Route>
+        <Route path='/search/:keyword' exact>
+          <SearchSnaps />
         </Route>
         <Route path='/snaps/new' exact>
           <NewSnap />
@@ -48,6 +56,12 @@ const App = () => {
         </Route>
         <Route path='/:userId/snaps' exact>
           <UserSnaps />
+        </Route>
+        <Route path='/random' exact>
+          <RandomSnap />
+        </Route>
+        <Route path='/search/:keyword' exact>
+          <SearchSnaps />
         </Route>
         <Route path='/auth'>
           <Auth />
