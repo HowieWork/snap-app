@@ -35,9 +35,9 @@ const SearchSnaps = () => {
 
   // RUN ONCE AFTER FIRST RENDERING
   useEffect(() => {
-    // FETCH SNAPS MATCHING KEYWORD
+    // INITIAL FETCH SNAPS MATCHING KEYWORD
     if (keyword) fetchSnaps(keyword);
-  }, []);
+  }, [fetchSnaps, keyword]);
 
   // SUBMIT SEARCH FORM
   const searchSubmitHandler = (event) => {
