@@ -56,9 +56,13 @@ export const useHttpClient = () => {
     []
   );
 
-  const clearError = () => {
+  // const clearError = () => {
+  //   setError(null);
+  // };
+
+  const clearError = useCallback(() => {
     setError(null);
-  };
+  }, []);
 
   useEffect(() => {
     // CLEAN UP: ABORT ALL INCOMPLETED REQUESTS IN CASE WE'RE LEAVING THE COMPONENT BEFORE THE REQUEST COMPLETED.

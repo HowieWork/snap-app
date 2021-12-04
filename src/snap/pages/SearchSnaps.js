@@ -10,14 +10,14 @@ import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
 import './SearchSnaps.css';
 
 const SearchSnaps = () => {
-  const { isLoading, sendRequest } = useHttpClient();
+  const { isLoading, error, sendRequest, clearError } = useHttpClient();
 
   const [loadedSnaps, setLoadedSnaps] = useState();
   const [searchState, setSearchState] = useState();
 
   const history = useHistory();
 
-  // GET KEYWORD FROM URL FOR THE FIRST TIME
+  // GET KEYWORD FROM URL
   const keyword = useParams().keyword;
 
   // RUN EACH RENDERING
@@ -31,14 +31,20 @@ const SearchSnaps = () => {
         setLoadedSnaps(responseData.snaps);
       } catch (err) {}
     };
+
+    // CLEAR POSSIBLE PREVIOUS ERROR
+    clearError();
+
     // FETCH SNAPS MATCHING KEYWORD
     if (keyword) fetchSnaps(keyword);
-  }, [keyword, sendRequest]);
+  }, [keyword, sendRequest, clearError]);
 
   // SUBMIT SEARCH FORM
   const searchSubmitHandler = (event) => {
     event.preventDefault();
 
+    // REDIRECT TO LATEST SEARCH STATE
+    // TODO IS IT A GOOD PRACTICE TO USE HISTORY FOR REDIRECT PURPOSE?
     history.push(`/search/${searchState}`);
   };
 
@@ -74,13 +80,13 @@ const SearchSnaps = () => {
         </div>
       )}
 
-      {!isLoading && !loadedSnaps && (
+      {!isLoading && error && (
         <p className='center-text no-data-found'>
           Could not find any snap. Please try again.
         </p>
       )}
 
-      {!isLoading && loadedSnaps && <SnapList items={loadedSnaps} />}
+      {!isLoading && !error && loadedSnaps && <SnapList items={loadedSnaps} />}
     </div>
   );
 };
