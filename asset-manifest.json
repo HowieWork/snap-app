@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/snap-app/static/css/main.179ebfe6.chunk.css",
-    "main.js": "/snap-app/static/js/main.b341bafc.chunk.js",
-    "main.js.map": "/snap-app/static/js/main.b341bafc.chunk.js.map",
+    "main.js": "/snap-app/static/js/main.ff21b2b4.chunk.js",
+    "main.js.map": "/snap-app/static/js/main.ff21b2b4.chunk.js.map",
     "runtime-main.js": "/snap-app/static/js/runtime-main.2c880d87.js",
     "runtime-main.js.map": "/snap-app/static/js/runtime-main.2c880d87.js.map",
     "static/js/2.c25cde93.chunk.js": "/snap-app/static/js/2.c25cde93.chunk.js",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.2c880d87.js",
     "static/js/2.c25cde93.chunk.js",
     "static/css/main.179ebfe6.chunk.css",
-    "static/js/main.b341bafc.chunk.js"
+    "static/js/main.ff21b2b4.chunk.js"
   ]
 }
