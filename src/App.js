@@ -86,7 +86,8 @@ const App = () => {
         logout: logout,
       }}
     >
-      <Router>
+      {/* ADDED BASENAME FOR GITHUB SPA SUPPORT FIX */}
+      <Router basename='/snap-app'>
         <MainNavigation />
         <main>
           <Suspense

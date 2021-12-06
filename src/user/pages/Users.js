@@ -28,13 +28,13 @@ const Users = () => {
   return (
     <Fragment>
       <ErrorModal error={error} onClear={clearError} />
+      <Hero />
+      <Features />
       {isLoading && (
         <div className='center-flex-row'>
           <LoadingSpinner />
         </div>
       )}
-      <Hero />
-      <Features />
       {!isLoading && loadedUsers && <UsersList items={loadedUsers} />}
       <CallToAction />
     </Fragment>
