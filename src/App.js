@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -7,15 +8,19 @@ import {
 
 import MainNavigation from './shared/components/Navigation/MainNavigation';
 import Footer from './shared/components/Footer/Footer';
+import LoadingSpinner from './shared/components/UIElements/LoadingSpinner';
 import Users from './user/pages/Users';
-import Auth from './user/pages/Auth';
-import UserSnaps from './snap/pages/UserSnaps';
-import RandomSnap from './snap/pages/RandomSnap';
-import SearchSnaps from './snap/pages/SearchSnaps';
-import NewSnap from './snap/pages/NewSnap';
-import UpdateSnap from './snap/pages/UpdateSnap';
+
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
+
+// CODE-SPLITTING
+const Auth = React.lazy(() => import('./user/pages/Auth'));
+const UserSnaps = React.lazy(() => import('./snap/pages/UserSnaps'));
+const RandomSnap = React.lazy(() => import('./snap/pages/RandomSnap'));
+const SearchSnaps = React.lazy(() => import('./snap/pages/SearchSnaps'));
+const NewSnap = React.lazy(() => import('./snap/pages/NewSnap'));
+const UpdateSnap = React.lazy(() => import('./snap/pages/UpdateSnap'));
 
 const App = () => {
   const { token, login, logout, userId } = useAuth();
@@ -83,7 +88,17 @@ const App = () => {
     >
       <Router>
         <MainNavigation />
-        <main>{routes}</main>
+        <main>
+          <Suspense
+            fallback={
+              <div className='center-text'>
+                <LoadingSpinner />
+              </div>
+            }
+          >
+            {routes}
+          </Suspense>
+        </main>
         <Footer />
       </Router>
     </AuthContext.Provider>
