@@ -1,5 +1,5 @@
 import { useReducer, useEffect } from 'react';
-
+import searchIcon from '../../../assets/search-icon.svg';
 import { validate } from '../../util/validators';
 
 import './SearchBar.css';
@@ -54,11 +54,7 @@ const SearchBar = (props) => {
       <label htmlFor='search' className='search-bar-label'>
         Search
       </label>
-      <img
-        src='/assets/search-icon.svg'
-        alt='search icon'
-        className='search-bar-icon'
-      />
+      <img src={searchIcon} alt='search icon' className='search-bar-icon' />
       <input
         id='search'
         type='text'
