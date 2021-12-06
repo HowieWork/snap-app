@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/snap-app/static/css/main.179ebfe6.chunk.css",
-    "main.js": "/snap-app/static/js/main.3d08a5a0.chunk.js",
-    "main.js.map": "/snap-app/static/js/main.3d08a5a0.chunk.js.map",
-    "runtime-main.js": "/snap-app/static/js/runtime-main.608ffeca.js",
-    "runtime-main.js.map": "/snap-app/static/js/runtime-main.608ffeca.js.map",
+    "main.js": "/snap-app/static/js/main.b341bafc.chunk.js",
+    "main.js.map": "/snap-app/static/js/main.b341bafc.chunk.js.map",
+    "runtime-main.js": "/snap-app/static/js/runtime-main.2c880d87.js",
+    "runtime-main.js.map": "/snap-app/static/js/runtime-main.2c880d87.js.map",
     "static/js/2.c25cde93.chunk.js": "/snap-app/static/js/2.c25cde93.chunk.js",
     "static/js/2.c25cde93.chunk.js.map": "/snap-app/static/js/2.c25cde93.chunk.js.map",
     "static/css/3.4df46181.chunk.css": "/snap-app/static/css/3.4df46181.chunk.css",
-    "static/js/3.8c357047.chunk.js": "/snap-app/static/js/3.8c357047.chunk.js",
-    "static/js/3.8c357047.chunk.js.map": "/snap-app/static/js/3.8c357047.chunk.js.map",
+    "static/js/3.a27b4d8c.chunk.js": "/snap-app/static/js/3.a27b4d8c.chunk.js",
+    "static/js/3.a27b4d8c.chunk.js.map": "/snap-app/static/js/3.a27b4d8c.chunk.js.map",
     "static/css/4.c4c83c18.chunk.css": "/snap-app/static/css/4.c4c83c18.chunk.css",
-    "static/js/4.a8eda5dd.chunk.js": "/snap-app/static/js/4.a8eda5dd.chunk.js",
-    "static/js/4.a8eda5dd.chunk.js.map": "/snap-app/static/js/4.a8eda5dd.chunk.js.map",
+    "static/js/4.8bdd41f6.chunk.js": "/snap-app/static/js/4.8bdd41f6.chunk.js",
+    "static/js/4.8bdd41f6.chunk.js.map": "/snap-app/static/js/4.8bdd41f6.chunk.js.map",
     "static/css/5.0e2e8462.chunk.css": "/snap-app/static/css/5.0e2e8462.chunk.css",
     "static/js/5.15a0f88e.chunk.js": "/snap-app/static/js/5.15a0f88e.chunk.js",
     "static/js/5.15a0f88e.chunk.js.map": "/snap-app/static/js/5.15a0f88e.chunk.js.map",
@@ -34,12 +34,13 @@
     "static/css/8.45fe7a9f.chunk.css.map": "/snap-app/static/css/8.45fe7a9f.chunk.css.map",
     "static/css/main.179ebfe6.chunk.css.map": "/snap-app/static/css/main.179ebfe6.chunk.css.map",
     "static/js/2.c25cde93.chunk.js.LICENSE.txt": "/snap-app/static/js/2.c25cde93.chunk.js.LICENSE.txt",
-    "static/media/Hero.css": "/snap-app/static/media/hero-bg.2af6d894.webp"
+    "static/media/Hero.css": "/snap-app/static/media/hero-bg.2af6d894.webp",
+    "static/media/search-icon.9091307f.svg": "/snap-app/static/media/search-icon.9091307f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.608ffeca.js",
+    "static/js/runtime-main.2c880d87.js",
     "static/js/2.c25cde93.chunk.js",
     "static/css/main.179ebfe6.chunk.css",
-    "static/js/main.3d08a5a0.chunk.js"
+    "static/js/main.b341bafc.chunk.js"
   ]
 }
