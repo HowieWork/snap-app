@@ -1,7 +1,7 @@
 # SNAP APP
 
-![Twitter Follow](https://img.shields.io/twitter/url?label=Follow%20%40howiework&style=social&url=https%3A%2F%2Ftwitter.com%2Fhowiework)
-![Twitter Follow](https://img.shields.io/twitter/follow/howiework?style=social)
+ <a href="https://twitter.com/TcNobo">
+    <img alt="Twitter" src="https://img.shields.io/twitter/follow/howiework?label=Follow%20%40howiework&logo=Twitter&style=flat-square"></a>
 
 ## Contributors
 
