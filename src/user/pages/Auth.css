@@ -11,6 +11,11 @@
   padding: 1rem 0.5rem;
   color: #333;
 }
+.authentication-form-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: -0.8rem;
+}
 
 .authentication-form-actions {
   text-align: center;

@@ -139,6 +139,15 @@ const Auth = () => {
         <h2 className='authentication-form-header'>Login Required</h2>
         <form onSubmit={authSubmitHandler}>
           {!isLoginMode && (
+            <ImageUpload
+              id='image'
+              center
+              // FIXME HOW TO SHOW errorText? ADD TEXT
+              errorText=''
+              onInput={inputHandler}
+            />
+          )}
+          {!isLoginMode && (
             <Input
               element='input'
               id='name'
@@ -149,17 +158,6 @@ const Auth = () => {
               onInput={inputHandler}
             />
           )}
-          {/* FIXME CENTER STYLE LOOKS ODD */}
-          {!isLoginMode && (
-            <ImageUpload
-              id='image'
-              center
-              // FIXME HOW TO SHOW errorText? ADD TEXT
-              errorText=''
-              onInput={inputHandler}
-            />
-          )}
-          {/* FIXME UPDATE MOTTO LABEL & PLACEHOLDER */}
           {!isLoginMode && (
             <Input
               element='input'
@@ -167,10 +165,14 @@ const Auth = () => {
               type='motto'
               label='Motto'
               validators={[VALIDATOR_REQUIRE()]}
-              placeholder='PLACEHOLDER TEXT TO ENCOURAGE PEOPLE TO WRITE WHY THEY JOIN SNAP'
               errorText='Please enter a motto.'
               onInput={inputHandler}
             />
+          )}
+          {!isLoginMode && (
+            <p className='authentication-form-text'>
+              Example: Happiness is Travelling
+            </p>
           )}
           <Input
             element='input'
@@ -181,6 +183,11 @@ const Auth = () => {
             errorText='Please enter a valid email address.'
             onInput={inputHandler}
           />
+          {!isLoginMode && (
+            <p className='authentication-form-text'>
+              Example: John@company.com
+            </p>
+          )}
           <Input
             element='input'
             id='password'
@@ -188,6 +195,7 @@ const Auth = () => {
             label='Password'
             validators={[VALIDATOR_MINLENGTH(8)]}
             errorText='Please enter a valid password, at least 8 characters.'
+            placeholder={isLoginMode ? '' : 'Must be at least 8 characters'}
             onInput={inputHandler}
           />
           <div className='authentication-form-actions'>
