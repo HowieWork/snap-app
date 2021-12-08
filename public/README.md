@@ -74,23 +74,23 @@
 
 <br />
 
-<img src="assets/site-screenshot.webp" width="860" align="center">
+<img src="assets/site-screenshot.webp" width="720" align="center">
 
-Remember saw some inspiring architecture photos, but have no idea where it is? Want to share your photos with like-mined people? Trying to learn more about specific architecture?
+<br />
 
-Snap App focus on creating a photo sharing platform for people who love architecture. It integrates sharing, navigation, architecture information and tour planning together. Its goal is to create a community and let its audience get inspired and live a better life.
+Remember saw some inspiring architecture photos, but have no idea where it is?
+
+Want to share your photos with like-mined people?
+
+Trying to learn more about specific architecture?
+
+Snap App focus on creating a photo sharing platform for people who love architecture. It integrates sharing, navigation, architecture information and tour planning together.
+
+Snap aims to create a community and encourage audience get inspired and live a better life.
 
 <br />
 
 ### Built with
-
-<!-- - [React.js](https://reactjs.org/)
-
-- [Node.js](https://nodejs.org/)
-
-- [Express](https://expressjs.com/)
-
-- [MongoDB](https://www.mongodb.com/) -->
 
 [![React][react-shield]][react-url]
 [![Node][node-shield]][node-url]
@@ -104,6 +104,38 @@ Snap App focus on creating a photo sharing platform for people who love architec
 
 ## Features
 
+### Share
+
+Upload a snap and share with others
+
+<img src="assets/share-screenshot.webp" width="720" align="center">
+
+<br />
+
+### Navigate
+
+Pick one snap interests you. See where it is.
+
+<img src="assets/navigate-screenshot.webp" width="720" align="center">
+
+<br />
+
+### Architecture
+
+Delve into unique architecture around the world. Be inspired.
+
+<img src="assets/architecture-screenshot.webp" width="720" align="center">
+
+<br />
+
+### Plan
+
+Explore selected tons of tours. Plan a visit.
+
+<img src="assets/plan-screenshot.webp" width="720" align="center">
+
+<br />
+
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
 <!-- ----------------------------------------- -->
@@ -112,13 +144,13 @@ Snap App focus on creating a photo sharing platform for people who love architec
 
 - [x] Frontend
   - [x] Basic structure: Pages & Routes
-  - [ ] Spanish
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-  - [ ] Chinese
-  - [ ] Spanish
+  - [ ] XXXXXX
+- [x] XXXXXX
+- [ ] XXXXXX
+- [ ] XXXXXX
+- [ ] XXXXXX
+  - [ ] XXXXXX
+  - [ ] XXXXXX
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
