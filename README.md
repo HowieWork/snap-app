@@ -75,7 +75,7 @@
 <br />
 
 <div align="center">
-<img src="assets/site-screenshot.webp" width="720" >
+  <img src="assets/site-screenshot.webp" width="720" >
 </div>
 
 <br />
@@ -110,7 +110,9 @@ Snap aims to create a community and encourage audience get inspired and live a b
 
 Upload a snap and share with others
 
-<img src="assets/share-screenshot.webp" width="720" align="center">
+<div align="center">
+  <img src="assets/share-screenshot.webp" width="720" align="center">
+</div>
 
 <br />
 
@@ -118,7 +120,9 @@ Upload a snap and share with others
 
 Pick one snap interests you. See where it is.
 
-<img src="assets/navigate-screenshot.webp" width="720" align="center">
+<div align="center">
+  <img src="assets/navigate-screenshot.webp" width="720" align="center">
+</div>
 
 <br />
 
@@ -126,7 +130,9 @@ Pick one snap interests you. See where it is.
 
 Delve into unique architecture around the world. Be inspired.
 
-<img src="assets/architecture-screenshot.webp" width="720" align="center">
+<div align="center">
+  <img src="assets/architecture-screenshot.webp" width="720" align="center">
+</div>
 
 <br />
 
@@ -134,7 +140,9 @@ Delve into unique architecture around the world. Be inspired.
 
 Explore selected tons of tours. Plan a visit.
 
-<img src="assets/plan-screenshot.webp" width="720" align="center">
+<div align="center">
+  <img src="assets/plan-screenshot.webp" width="720" align="center">
+</div>
 
 <br />
 
