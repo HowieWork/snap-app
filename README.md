@@ -19,17 +19,13 @@
 <div align="center">
 
   <!-- PROJECT LOGO / TITLE -->
-  <!-- <a href="https://github.com/howiework/snap-app">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
-
-  <a style="font-size:36px; margin:0" href="https://github.com/howiework/snap-app">
-    SNAP
+  <a href="https://github.com/howiework/snap-app">
+    <img src="assets/site-logo.svg" alt="Site Logo" width="160" height="80">
   </a>
 
-  <h3 align="center">Share · Navigate · Architecture · Plan</h3>
+  <h3>Share · Navigate · Architecture · Plan</h3>
 
-  <p align="center">
+  <p>
    A photo sharing platform for people who love architecture!
   </p>
 
@@ -78,13 +74,17 @@
 
 <br />
 
-[![Snap App Screen Shot][snap-app-screenshot]][demo-url]
+[![Site Screen Shot][site-screenshot]][demo-url]
 
 ### Built with
 
 - [React.js](https://reactjs.org/)
 
-* Backend: NodeJS, Express, MongoDB
+- [Node.js](https://nodejs.org/)
+
+- [Express](https://expressjs.com/)
+
+- [MongoDB](https://www.mongodb.com/)
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
@@ -98,6 +98,16 @@
 
 ## Roadmap
 
+- [x] Frontend
+  - [x] Basic structure: Pages & Routes
+  - [ ] Spanish
+- [x] Add back to top links
+- [ ] Add Additional Templates w/ Examples
+- [ ] Add "components" document to easily copy & paste sections of the readme
+- [ ] Multi-language Support
+  - [ ] Chinese
+  - [ ] Spanish
+
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
 <!-- ----------------------------------------- -->
@@ -105,8 +115,6 @@
 ## Contributors
 
 - Howie Wang <howiewang2020@gmail.com>
-
-<p align="right"><a href="#top">Back to Top ↑</a></p>
 
 <!-- ----------------------------------------- -->
 
@@ -116,11 +124,11 @@
 
 Licensed under the [MIT License](LICENSE)
 
-<p align="right"><a href="#top">Back to Top ↑</a></p>
-
 <!-- ----------------------------------------- -->
 
 ## Contact
+
+- Howie Wang <howiewang2020@gmail.com>
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
@@ -128,8 +136,8 @@ Licensed under the [MIT License](LICENSE)
 
 <!-- BADGES/SHIELDS REFERENCE -->
 
+[site-screenshot]: assets/site-screenshot.webp
 [demo-url]: https://howiework.github.io/snap-app/
-[snap-app-screenshot]: assets/snap-app-screenshot.webp
 [last-commit-shield]: https://img.shields.io/github/last-commit/howiework/snap-app?style=flat-square
 [license-shield]: https://img.shields.io/github/license/howiework/snap-app?style=flat-square
 [license-url]: https://github.com/HowieWork/snap-app/blob/gh-pages/LICENSE
