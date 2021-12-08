@@ -74,7 +74,9 @@
 
 <br />
 
-<img src="assets/site-screenshot.webp" width="720" align="center">
+<div align="center">
+<img src="assets/site-screenshot.webp" width="720" >
+</div>
 
 <br />
 
