@@ -23,7 +23,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h1 style="border:none; margin:0" href="https://github.com/howiework/snap-app">
+  <h1 style="border-bottom:none; margin:0" href="https://github.com/howiework/snap-app">
     SNAP
   </h1>
 
@@ -37,9 +37,9 @@
 
   <!-- PROJECT LINKS -->
   <div align="center">
-    <a href="https://howiework.github.io/snap-app/"><strong>DEMO</strong></a>
+    <a href="https://howiework.github.io/snap-app/" target="_blank"><strong>DEMO</strong></a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>GITHUB</strong></a>
+    <a href="https://github.com/othneildrew/Best-README-Template" target="_blank"><strong>GITHUB</strong></a>
     ·
     <a href="#contact"><strong>CONTACT</strong></a>
     <!-- 
