@@ -76,6 +76,10 @@
 
 ## Overview
 
+<br />
+
+[![Snap App Screen Shot][snap-app-screenshot]][demo-url]
+
 ### Built with
 
 - Frontend: React
@@ -124,6 +128,8 @@ Licensed under the [MIT License](LICENSE)
 
 <!-- BADGES/SHIELDS REFERENCE -->
 
+[demo-url]: https://howiework.github.io/snap-app/
+[snap-app-screenshot]: assets/snap-app-screenshot.webp
 [last-commit-shield]: https://img.shields.io/github/last-commit/howiework/snap-app?style=flat-square
 [license-shield]: https://img.shields.io/github/license/howiework/snap-app?style=flat-square
 [license-url]: https://github.com/HowieWork/snap-app/blob/gh-pages/LICENSE
