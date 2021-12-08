@@ -23,9 +23,9 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h1 style="border-bottom:none; margin:0" href="https://github.com/howiework/snap-app">
+  <a style="font-size:36px; margin:0" href="https://github.com/howiework/snap-app">
     SNAP
-  </h1>
+  </a>
 
   <h3 align="center">Share · Navigate · Architecture · Plan</h3>
 
@@ -82,9 +82,9 @@
 
 ### Built with
 
-- Frontend: React
+- [React.js](https://reactjs.org/)
 
-- Backend: NodeJS, Express, MongoDB
+* Backend: NodeJS, Express, MongoDB
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
