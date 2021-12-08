@@ -33,11 +33,11 @@
 
   <!-- PROJECT LINKS -->
   <div align="center">
-    <a href="https://howiework.github.io/snap-app/" target="_blank"><strong>DEMO</strong></a>
+    <a href="https://howiework.github.io/snap-app/" target="_blank"><strong>Demo</strong></a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template" target="_blank"><strong>GITHUB</strong></a>
+    <a href="https://github.com/othneildrew/Best-README-Template" target="_blank"><strong>GitHub</strong></a>
     ·
-    <a href="#contact"><strong>CONTACT</strong></a>
+    <a href="#contact"><strong>Contact</strong></a>
     <!-- 
     ·
     <a href="#"><strong>REPORT/REQUEST</strong></a> 
@@ -50,7 +50,7 @@
 
 <!-- TABLE OF CONTENTS SECTION -->
 <details>
-  <summary>Table</summary>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#overview">Overview</a>
@@ -76,15 +76,27 @@
 
 [![Site Screen Shot][site-screenshot]][demo-url]
 
+Remember saw some inspiring architecture photos, but have no idea where it is? Want to share your photos with like-mined people? Trying to learn more about specific architecture?
+
+Snap App focus on creating a photo sharing platform for people who love architecture. It integrates sharing, navigation, architecture information and tour planning together. Its goal is to create a community and let its audience get inspired and live a better life.
+
+<br />
+
 ### Built with
 
-- [React.js](https://reactjs.org/)
+<!-- - [React.js](https://reactjs.org/)
 
 - [Node.js](https://nodejs.org/)
 
 - [Express](https://expressjs.com/)
 
-- [MongoDB](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/) -->
+
+[![React][react-shield]][react-url]
+[![Node][node-shield]][node-url]
+[![Express][express-shield]][express-url]
+[![Axios][axios-shield]][axios-url]
+[![Mongoose][mongoose-shield]][mongoose-url]
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
@@ -135,9 +147,26 @@ Licensed under the [MIT License](LICENSE)
 <!-- ----------------------------------------- -->
 
 <!-- BADGES/SHIELDS REFERENCE -->
+<!-- Site Related -->
 
 [site-screenshot]: assets/site-screenshot.webp
 [demo-url]: https://howiework.github.io/snap-app/
+
+<!-- Built with -->
+
+[react-shield]: https://img.shields.io/static/v1?label=React&message=v17.0.2&color=blue&style=flat-square
+[react-url]: https://reactjs.org/
+[node-shield]: https://img.shields.io/static/v1?label=Node&message=v14.17.4&color=green&style=flat-square
+[node-url]: https://nodejs.org/
+[express-shield]: https://img.shields.io/static/v1?label=Express&message=v4.17.1&color=lightgrey&style=flat-square
+[express-url]: https://expressjs.com/
+[axios-shield]: https://img.shields.io/static/v1?label=Axios&message=v0.24.0&color=purple&style=flat-square
+[axios-url]: https://axios-http.com/
+[mongoose-shield]: https://img.shields.io/static/v1?label=Mongoose&message=v6.0.14&color=brightgreen&style=flat-square
+[mongoose-url]: https://mongoosejs.com/
+
+<!-- General -->
+
 [last-commit-shield]: https://img.shields.io/github/last-commit/howiework/snap-app?style=flat-square
 [license-shield]: https://img.shields.io/github/license/howiework/snap-app?style=flat-square
 [license-url]: https://github.com/HowieWork/snap-app/blob/gh-pages/LICENSE
