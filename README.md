@@ -74,8 +74,7 @@
 
 <br />
 
-[![Site Screen Shot][site-screenshot]][demo-url]
-<img src="assets/site-screenshot.webp" width="480">
+<img src="assets/site-screenshot.webp" width="860" align="center">
 
 Remember saw some inspiring architecture photos, but have no idea where it is? Want to share your photos with like-mined people? Trying to learn more about specific architecture?
 
