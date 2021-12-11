@@ -153,14 +153,29 @@ Explore selected tons of tours. Plan a visit.
 ## Roadmap
 
 - [x] Frontend
-  - [x] Basic structure: Pages & Routes
-  - [ ] XXXXXX
-- [x] XXXXXX
-- [ ] XXXXXX
-- [ ] XXXXXX
-- [ ] XXXXXX
-  - [ ] XXXXXX
-  - [ ] XXXXXX
+
+  - [x] Ideation
+  - [x] Wireframing
+  - [x] Design system
+  - [x] Prototyping
+  - [x] Build Structure: Pages & Routes
+  - [x] Build React Components
+  - [x] Add Google Maps
+  - [x] Add Authorization
+
+- [x] Backend
+
+  - [x] Build a REST API
+  - [x] Create Database
+  - [x] Connect React to Backend
+  - [x] Add file upload
+  - [x] Add Authentication and Authorization
+
+- [x] Deployment
+  - [x] Set up Environment variables for both FE & BE
+  - [x] API keys & credentials
+  - [x] Deploy REST API
+  - [x] Deploy React SPA
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
