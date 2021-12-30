@@ -6,9 +6,7 @@
 <!-- NOTE REFERENCE STYLE FOR READABILITY -->
 <div align='center' markdown="1">
 
-![Last Commit][last-commit-shield]
-[![MIT License][license-shield]][license-url]
-[![Twitter][twitter-shield]][twitter-url]
+![Last Commit][last-commit-shield] [![MIT License][license-shield]][license-url] [![Twitter][twitter-shield]][twitter-url]
 
 </div>
 <br />
@@ -94,11 +92,7 @@ Snap aims to create a community and encourage audience get inspired and live a b
 
 ### Built with
 
-[![React][react-shield]][react-url]
-[![Node][node-shield]][node-url]
-[![Express][express-shield]][express-url]
-[![Axios][axios-shield]][axios-url]
-[![Mongoose][mongoose-shield]][mongoose-url]
+[![React][react-shield]][react-url] [![Node][node-shield]][node-url] [![Express][express-shield]][express-url] [![Axios][axios-shield]][axios-url] [![Mongoose][mongoose-shield]][mongoose-url]
 
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
