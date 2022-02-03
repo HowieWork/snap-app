@@ -76,6 +76,10 @@
   <img src="assets/site-screenshot.webp" width="720" >
 </div>
 
+<div align="center">
+  <a href="https://youtu.be/UEYlXDD5DRI" target="_blank">Video Demo</a>
+</div>
+
 <br />
 
 Remember saw some inspiring architecture photos, but have no idea where it is?
