@@ -36,13 +36,14 @@
     <a href="https://github.com/othneildrew/Best-README-Template" target="_blank"><strong>GitHub</strong></a>
     ·
     <a href="#contact"><strong>Contact</strong></a>
-    <!-- 
-    ·
-    <a href="#"><strong>REPORT/REQUEST</strong></a> 
-    -->
   </div>
-  <br />
 </div>
+
+<br />
+
+\*Source code: [frontend](https://github.com/HowieWork/snap-app/tree/master), [backend](https://github.com/HowieWork/snap-app-backend)
+
+<br />
 
 <!-- ----------------------------------------- -->
 
