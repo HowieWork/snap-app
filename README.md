@@ -3,7 +3,7 @@
 <!-- ----------------------------------------- -->
 
 <!-- BADGES/SHIELDS SECTION -->
-<!-- NOTE REFERENCE STYLE FOR READABILITY -->
+<!-- REFERENCE STYLE FOR READABILITY -->
 <div align='center' markdown="1">
 
 ![Last Commit][last-commit-shield] [![MIT License][license-shield]][license-url] [![Twitter][twitter-shield]][twitter-url]
