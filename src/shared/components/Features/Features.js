@@ -42,7 +42,7 @@ const Features = () => {
           <MdOutlineLuggage />
         </div>
         <p className='feature-title'>Plan</p>
-        <p className='feature-text'>Explore seleted tours. Plan a visit.</p>
+        <p className='feature-text'>Explore selected tours. Plan a visit.</p>
       </div>
       <div className='scroll-down'>
         <MdKeyboardArrowDown />
