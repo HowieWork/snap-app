@@ -16,7 +16,6 @@ const ErrorModal = (props) => {
         </Button>
       }
     >
-      {/* TODO IS THIS ERROR-MODAL-TEXT GOOD WAY? */}
       <p className='error-modal-text'>{props.error}</p>
     </Modal>
   );

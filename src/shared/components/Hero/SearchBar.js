@@ -37,7 +37,7 @@ const SearchBar = (props) => {
     onSearch(value);
   }, [value, onSearch]);
 
-  const changeHanlder = (event) => {
+  const changeHandler = (event) => {
     dispatch({
       type: 'CHANGE',
       val: event.target.value,
@@ -65,7 +65,7 @@ const SearchBar = (props) => {
             `${props.errorText}`) ||
           'Search...'
         }
-        onChange={changeHanlder}
+        onChange={changeHandler}
         onBlur={touchHandler}
         value={inputState.value}
       />

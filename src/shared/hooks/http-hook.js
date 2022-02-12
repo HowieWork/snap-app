@@ -26,7 +26,6 @@ export const useHttpClient = () => {
           signal: httpAbortCtrl.signal,
         });
 
-        // FIXME BELOW 404 IS WHAT I ADDED, NOT SURE IF CORRECT
         // HANDLING 404: NO ROUTE FOUND
         if (response.status === 404) {
           throw new Error('Not found');
@@ -41,7 +40,6 @@ export const useHttpClient = () => {
 
         // HANDLING 400s/500s STATUS CODE
         if (!response.ok) {
-          // FIXME ERROR MESSAGE NEEDS TO BE UPDATED
           throw new Error(responseData.message);
         }
 

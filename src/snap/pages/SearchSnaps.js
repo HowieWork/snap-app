@@ -44,7 +44,6 @@ const SearchSnaps = () => {
     event.preventDefault();
 
     // REDIRECT TO LATEST SEARCH STATE
-    // TODO IS IT A GOOD PRACTICE TO USE HISTORY FOR REDIRECT PURPOSE?
     history.push(`/search/${searchState}`);
   };
 

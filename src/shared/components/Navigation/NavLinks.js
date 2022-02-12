@@ -13,13 +13,6 @@ const NavLinks = () => {
   return (
     <ul className='center-flex-row medium-gap nav-links'>
       <li>
-        {/* NOTE NAVLINK NOT WORKING WITH HASH, BUT USE NAVHASHLINK PROVIDED BY REACT-ROUTER-HASH-LINK IS FIX */}
-        {/* <NavLink
-          to='/'
-          exact
-        >
-          All Users
-        </NavLink> */}
         <NavHashLink smooth to='/#users' exact>
           All Users
         </NavHashLink>

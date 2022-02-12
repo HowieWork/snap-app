@@ -115,17 +115,9 @@ const Auth = () => {
           `${process.env.REACT_APP_BACKEND_URL}/users/signup`,
           'POST',
           formData
-          // JSON.stringify({
-          //   email: formState.inputs.email.value,
-          //   password: formState.inputs.password.value,
-          //   name: formState.inputs.name.value,
-          // }),
-          // {
-          //   'Content-Type': 'application/json',
-          // }
         );
 
-        // NOTE SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
+        // SET LOGGED IN & ASSIGN USER ID TO AUTH CONTEXT USERID
         auth.login(responseData.userId, responseData.token);
       } catch (err) {}
     }
@@ -142,7 +134,6 @@ const Auth = () => {
             <ImageUpload
               id='image'
               center
-              // FIXME HOW TO SHOW errorText? ADD TEXT
               errorText=''
               onInput={inputHandler}
             />

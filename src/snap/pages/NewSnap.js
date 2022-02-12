@@ -46,11 +46,9 @@ const NewSnap = () => {
   // REDIRECT USER TO A DIFFERENT PAGE
   const history = useHistory();
 
-  // Submitting form
+  // SUBMITTING FORM
   const snapSubmitHandler = async (event) => {
     event.preventDefault();
-
-    console.log(formState.inputs);
 
     try {
       // REQUEST BODY: FORMDATA
@@ -58,24 +56,14 @@ const NewSnap = () => {
       formData.append('title', formState.inputs.title.value);
       formData.append('description', formState.inputs.description.value);
       formData.append('address', formState.inputs.address.value);
-      // NOTE NO NEED APPEND CREATOR, SINCE RELAVANT INFO WILL BE PROVIDED BY REQUEST USERDATA BACKEND
-      // formData.append('creator', auth.userId);
       formData.append('image', formState.inputs.image.value);
 
       // POST REQUEST TO BACKEND
-      // http://localhost:8000/api/snaps/
       await sendRequest(
         `${process.env.REACT_APP_BACKEND_URL}/snaps/`,
         'POST',
         formData,
         { Authorization: 'Bearer ' + auth.token }
-        // JSON.stringify({
-        //   title: formState.inputs.title.value,
-        //   description: formState.inputs.description.value,
-        //   address: formState.inputs.address.value,
-        //   creator: auth.userId,
-        // }),
-        // { 'Content-Type': 'application/json' }
       );
 
       // REDIRECT USER TO A DIFFERENT PAGE

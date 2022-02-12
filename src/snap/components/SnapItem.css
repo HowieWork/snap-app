@@ -31,10 +31,6 @@
   font-weight: 600;
   color: #333;
   text-align: center;
-  /* FIXME What if title is too long? How to show long title? */
-  /* white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden; */
 }
 
 .snap-item__info-address {

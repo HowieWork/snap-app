@@ -1,26 +1,12 @@
 .main-header {
-  /* position: fixed; */
-  /* top: 0; */
-  /* z-index: 10; */
-  /* background-color: #fafafa; */
   padding: 0 11.2rem;
   width: 100%;
-  /* FIXME UPDATE HEIGHT */
-  /* height: 9.6rem; */
   height: 10vh;
 
   justify-content: space-between;
   display: flex;
   align-items: center;
 }
-
-main {
-  /* margin-top: 4.8rem; */
-}
-
-/* @media (max-width: 64em) {
-}
-*/
 
 @media (max-width: 768px) {
   .main-header {

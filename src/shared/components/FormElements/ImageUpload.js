@@ -10,17 +10,12 @@ const ImageUpload = (props) => {
   const filePickerRef = useRef();
 
   const pickImageHandler = () => {
-    // DOM ELEMENT CLICK
     filePickerRef.current.click();
   };
 
   const pickedHandler = (event) => {
-    // EVENT.TARGET.FILES CONTAINS UPLOADED FILE INFO
-    // console.log(event.target.files);
-
     let pickedFile;
 
-    // USE FILEISVALID VARIABLE IN CASE SETISVALID HAPPENS AFTER EXECUATION OF PROPS.ONINPUT
     let fileIsValid = isValid;
     if (event.target.files && event.target.files.length === 1) {
       pickedFile = event.target.files[0];
@@ -40,7 +35,6 @@ const ImageUpload = (props) => {
       return;
     }
     const fileReader = new FileReader();
-    // LOAD EVENT TRIGGERED EACH TIME THE READING IS COMPLETED
     fileReader.onload = () => {
       setPreviewUrl(fileReader.result);
     };
@@ -49,7 +43,6 @@ const ImageUpload = (props) => {
 
   return (
     <div className='form-control'>
-      {/* NOT SHOW INPUT UNLESS CLICK BUTTON */}
       <input
         id={props.id}
         style={{ display: 'none' }}
@@ -66,7 +59,6 @@ const ImageUpload = (props) => {
         <Button type='button' secondary onClick={pickImageHandler}>
           Pick image
         </Button>
-        {/* FIXME HAVEN'T SHOW ERROR TEXT YET */}
         {!isValid && <p>{props.errorText}</p>}
       </div>
     </div>

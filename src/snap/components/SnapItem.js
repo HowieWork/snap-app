@@ -27,7 +27,7 @@ const SnapItem = (props) => {
   };
   const confirmDeleteHandler = async () => {
     setShowConfirmModal(false);
-    // console.log('DELETING...');
+
     try {
       await sendRequest(
         `${process.env.REACT_APP_BACKEND_URL}/snaps/${props.id}`,
