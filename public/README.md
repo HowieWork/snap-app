@@ -176,6 +176,13 @@ Explore selected tons of tours. Plan a visit.
   - [x] Deploy REST API
   - [x] Deploy React SPA
 
+**UPDATES:**
+
+- [x] 11/12/2022: RE-deploy REST API using [Render](https://render.com/); Also some minor fix:
+  - [x] Add unsupported routes error handling in backend
+  - [x] Fix footer: year
+  - [x] Update config files relating new REST API host
+
 <p align="right"><a href="#top">Back to Top ↑</a></p>
 
 <!-- ----------------------------------------- -->
