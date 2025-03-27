@@ -46,7 +46,7 @@ const App = () => {
           <NewSnap />
         </Route>
         <Route path='/snaps/:snapId'>
-          <UpdateSnap></UpdateSnap>
+          <UpdateSnap />
         </Route>
         <Redirect to='/' />
       </Switch>

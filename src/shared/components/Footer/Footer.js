@@ -1,9 +1,13 @@
-import './Footer.css';
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className='footer-section center-text'>
-      © 2022 Howie Wang. All rights reserved.
+    <footer className="footer-section center-text">
+      ©
+      <a target="_blank" href="https://www.howiework.com/">
+        Howiework
+      </a>
+      . All rights reserved.
     </footer>
   );
 };
